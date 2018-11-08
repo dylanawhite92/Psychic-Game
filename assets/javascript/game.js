@@ -11,3 +11,4 @@ var losses = 0;
 var guessesMade = 0;
 
 var guessesLeft = 10;
+
