@@ -22,8 +22,8 @@ function newWord() {
 
 // Start a new game, resetting variables to default starting state
 function reset() {
-     wins = 0;
-     losses = 0;
+    wins = 0;
+    losses = 0;
     newWord();
 }
 
@@ -48,8 +48,9 @@ document.onkeyup = function (event) {
     if (guessesLeft === 0) {
         losses++;
         document.getElementById("losses").textContent = "Losses: " + losses;
-        newWord();
         alert("You Lost! :( Let's try a new letter.");
+        newWord();
+        document.getElementById("guesses-left").textContent = "Guesses Left: " + guessesLeft;
     }
     if (guessesMade.indexOf(userGuess) === -1) {
         guessesMade.push(userGuess);
